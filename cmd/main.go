@@ -26,6 +26,7 @@ func main() {
 
 	app.Post("/create-new-user", handlers.CreateNewUser)
 	app.Post("/login-user", handlers.LogInUser)
+	app.Post("/create-payment-intent", handlers.CreateCheckoutSession)
 
 	app.Post("/create-stream-user", func(c *fiber.Ctx) error {
 		client, err := stream.NewClient("yt87ffbuwxzy", "wvjvm4rbhkteq4sx4d2rx5cvg82e7zcau5huubwght3m6x5mfvs9us6ku3rxsgf8")

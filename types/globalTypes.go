@@ -22,3 +22,10 @@ type Params struct {
 	SaltLength  uint32
 	KeyLength   uint32
 }
+
+type Donation struct {
+	Id string `json:"id"`
+	Donor string `json:"donor"`
+	Amount string `json:"amount"`
+	Message string `json:"message"`
+}
