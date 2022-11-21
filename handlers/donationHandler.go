@@ -9,6 +9,7 @@ import (
 	"github.com/stripe/stripe-go/v72/paymentintent"
 )
 
+// hi :)
 
 type createPaymentIntentReq struct {
 	PaymentType string `json:"paymentType"`
@@ -36,7 +37,7 @@ func CreateCheckoutSession(c *fiber.Ctx) error {
 
 	// This is your test secret API key.
 	stripe.Key = os.Getenv("STRIPE_API_KEY")
-	
+
 	params := &stripe.PaymentIntentParams{
 		Amount: stripe.Int64(req.Amount),
 		Currency: stripe.String(req.Currency),
